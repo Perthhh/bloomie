@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blooie — Services</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+:root{--cream:#fff6e7;--peach:#ff9275;--yellow:#ffd84d;--orange:#ff6848;--ink:#171717;--purple:#9182ff}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}a{text-decoration:none;color:inherit}h1,h2,h3{font-family:"Space Grotesk"}
+.nav{width:min(1180px,calc(100% - 40px));margin:20px auto;padding:14px 18px;background:#fffdf8;border:3px solid var(--ink);border-radius:60px;box-shadow:5px 5px var(--ink);display:flex;justify-content:space-between;align-items:center}.logo{font:700 27px "Space Grotesk"}.logo span{color:var(--orange)}.navlinks{display:flex;gap:28px;font-size:14px;font-weight:700}.navlinks a:hover{color:var(--orange)}.navbtn{background:var(--ink);color:white;padding:11px 20px;border-radius:30px;font-weight:700}
+.hero{width:min(1180px,calc(100% - 40px));margin:100px auto 80px;position:relative}.tag{background:var(--yellow);border:3px solid var(--ink);display:inline-block;padding:8px 15px;border-radius:30px;font-weight:800;transform:rotate(-2deg)}h1{font-size:clamp(70px,12vw,150px);line-height:.8;letter-spacing:-8px;margin-top:30px}.hero p{font-size:20px;max-width:550px;line-height:1.6;margin-top:35px}.scribble{position:absolute;right:50px;top:10px;font-size:100px;transform:rotate(20deg)}
+.grid{width:min(1180px,calc(100% - 40px));margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:25px;padding-bottom:100px}.card{border:4px solid var(--ink);border-radius:32px;min-height:420px;padding:35px;box-shadow:8px 8px var(--ink);transition:.3s;position:relative;overflow:hidden}.card:hover{transform:translateY(-8px) rotate(-1deg)}.card:nth-child(1){background:var(--peach)}.card:nth-child(2){background:var(--yellow)}.card:nth-child(3){background:#bce8d8}.card:nth-child(4){background:var(--purple)}.num{font-weight:800;font-size:15px}.card h2{font-size:52px;line-height:.9;letter-spacing:-3px;margin:50px 0 20px}.card p{max-width:390px;line-height:1.6}.shape{position:absolute;width:180px;height:180px;border:4px solid var(--ink);border-radius:50%;right:-45px;bottom:-50px;background:var(--orange)}.card:nth-child(2) .shape{background:var(--purple);border-radius:20px;transform:rotate(25deg)}.card:nth-child(3) .shape{background:var(--yellow)}.card:nth-child(4) .shape{background:var(--peach)}
+footer{background:var(--orange);border-top:4px solid var(--ink);padding:50px max(20px,calc((100% - 1180px)/2));display:flex;justify-content:space-between;font-weight:700}
+@media(max-width:700px){.navlinks{display:none}.hero{margin-top:70px}h1{font-size:19vw}.scribble{font-size:60px;right:10px}.grid{grid-template-columns:1fr}.card{min-height:350px}.card h2{font-size:43px}footer{display:block}}
+</style>
+</head>
+<body>
+<nav class="nav">
+<a class="logo" href="index.html">BLOO<span>IE</span>.</a>
+<div class="navlinks"><a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="process.html">Process</a><a href="contact.html">Contact</a></div>
+<a class="navbtn" href="contact.html">Let's talk ↗</a>
+</nav>
+
+<section class="hero">
+<div class="tag">WHAT WE DO ✦</div>
+<h1>BIG IDEAS.<br>BOLD MOVES.</h1>
+<p>เราออกแบบตั้งแต่ความคิดแรกจนถึงประสบการณ์สุดท้าย เพื่อให้แบรนด์ของคุณโดดเด่นและเป็นที่จดจำ</p>
+<div class="scribble">✳</div>
+</section>
+
+<section class="grid">
+<a class="card" href="contact.html"><div class="num">01 / STRATEGY</div><h2>Brand<br>Strategy</h2><p>Positioning, identity direction, audience insight และ creative strategy ที่ทำให้แบรนด์มีจุดยืนชัดเจน</p><div class="shape"></div></a>
+<a class="card" href="contact.html"><div class="num">02 / IDENTITY</div><h2>Visual<br>Identity</h2><p>Logo, typography, color, art direction และ brand system ที่สร้าง personality ให้แบรนด์</p><div class="shape"></div></a>
+<a class="card" href="contact.html"><div class="num">03 / DIGITAL</div><h2>Web &<br>Digital</h2><p>เว็บไซต์และ digital experiences ที่ responsive, intuitive และมี visual impact</p><div class="shape"></div></a>
+<a class="card" href="contact.html"><div class="num">04 / CAMPAIGN</div><h2>Creative<br>Campaigns</h2><p>Concept, content direction และ campaign visuals ที่ทำให้คนหยุดดูและอยากมีส่วนร่วม</p><div class="shape"></div></a>
+</section>
+
+<footer><div>© 2026 BLOOIE STUDIO</div><div>Let's make something loud ↗</div></footer>
+</body>
+</html>

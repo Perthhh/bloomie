@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blooie — Creative Studio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --cream:#FFF6E7;
+  --peach:#FF8E72;
+  --yellow:#FFD84D;
+  --orange:#FF6B4A;
+  --ink:#171717;
+  --white:#fffdf8;
+  --purple:#8E7CFF;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--cream);
+  color:var(--ink);
+  font-family:"DM Sans",sans-serif;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Space Grotesk",sans-serif}
+.nav{
+  width:min(1180px,calc(100% - 40px));
+  margin:20px auto;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:var(--white);
+  border:3px solid var(--ink);
+  border-radius:60px;
+  box-shadow:5px 5px 0 var(--ink);
+  position:relative;
+  z-index:20;
+}
+.logo{font:700 27px "Space Grotesk";letter-spacing:-1.5px}
+.logo span{color:var(--orange)}
+.navlinks{display:flex;gap:28px;font-weight:700;font-size:14px}
+.navlinks a{position:relative}
+.navlinks a:after{
+  content:"";position:absolute;left:0;bottom:-5px;width:0;height:3px;
+  background:var(--orange);transition:.25s
+}
+.navlinks a:hover:after{width:100%}
+.navbtn{
+  background:var(--ink);color:#fff;padding:11px 20px;
+  border-radius:30px;font-weight:700;transition:.2s
+}
+.navbtn:hover{transform:translateY(-3px);background:var(--orange)}
+.hero{
+  width:min(1180px,calc(100% - 40px));
+  min-height:720px;margin:70px auto 100px;
+  position:relative;display:flex;align-items:center;
+}
+.hero-copy{width:58%;position:relative;z-index:3}
+.eyebrow{
+  display:inline-block;padding:8px 14px;border:2px solid var(--ink);
+  border-radius:30px;background:var(--yellow);font-weight:800;
+  transform:rotate(-2deg);margin-bottom:25px
+}
+.hero h1{
+  font-size:clamp(70px,9.5vw,140px);
+  line-height:.82;letter-spacing:-7px;max-width:800px
+}
+.hero h1 .stroke{
+  color:transparent;-webkit-text-stroke:3px var(--ink)
+}
+.hero p{font-size:19px;line-height:1.6;max-width:500px;margin:35px 0}
+.cta{
+  display:inline-flex;padding:16px 25px;border:3px solid var(--ink);
+  background:var(--orange);border-radius:40px;font-weight:800;
+  box-shadow:5px 5px 0 var(--ink);transition:.2s
+}
+.cta:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.visual{position:absolute;right:-20px;top:30px;width:48%;height:620px}
+.blob{
+  position:absolute;width:410px;height:410px;border-radius:48% 52% 42% 58%;
+  background:var(--peach);border:4px solid var(--ink);
+  right:50px;top:80px;transform:rotate(-14deg);
+  animation:float 5s ease-in-out infinite
+}
+.blob2{
+  position:absolute;width:220px;height:220px;background:var(--yellow);
+  border:4px solid var(--ink);border-radius:50%;right:0;top:20px;
+  animation:spin 15s linear infinite
+}
+.sun{
+  position:absolute;width:130px;height:130px;background:var(--purple);
+  border:4px solid var(--ink);border-radius:50%;left:20px;bottom:100px
+}
+.star{
+  position:absolute;font-size:90px;right:120px;bottom:25px;
+  animation:bounce 3s ease-in-out infinite
+}
+.face{
+  position:absolute;width:230px;height:290px;background:#f5b48e;
+  border:4px solid var(--ink);border-radius:48% 48% 45% 45%;
+  right:140px;top:140px;transform:rotate(7deg)
+}
+.eye{position:absolute;width:18px;height:26px;background:var(--ink);border-radius:50%;top:100px}
+.eye.one{left:65px}.eye.two{right:65px}
+.smile{
+  position:absolute;width:65px;height:35px;border-bottom:5px solid var(--ink);
+  border-radius:50%;left:80px;top:150px
+}
+.section{width:min(1180px,calc(100% - 40px));margin:0 auto 120px}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}
+.section h2{font-size:clamp(45px,7vw,85px);letter-spacing:-4px;line-height:.9}
+.section-head p{max-width:350px;line-height:1.6}
+.marquee{
+  overflow:hidden;background:var(--ink);color:var(--yellow);
+  border-block:4px solid var(--ink);padding:18px 0;margin-bottom:120px;
+  white-space:nowrap;font:700 35px "Space Grotesk"
+}
+.marquee span{display:inline-block;animation:marquee 18s linear infinite}
+.work-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:25px}
+.project{
+  min-height:390px;border:4px solid var(--ink);border-radius:30px;
+  padding:30px;position:relative;overflow:hidden;transition:.3s;
+  box-shadow:7px 7px 0 var(--ink)
+}
+.project:hover{transform:rotate(-1deg) translateY(-8px)}
+.project:nth-child(1){background:var(--yellow)}
+.project:nth-child(2){background:#B9E7D8}
+.project:nth-child(3){background:var(--peach);min-height:260px}
+.project h3{font-size:42px;letter-spacing:-2px;position:relative;z-index:2}
+.project small{font-weight:800}
+.project .shape{
+  position:absolute;width:230px;height:230px;border:4px solid var(--ink);
+  border-radius:50%;right:-30px;bottom:-60px;background:var(--orange)
+}
+.project:nth-child(2) .shape{background:var(--purple);border-radius:30px;transform:rotate(25deg)}
+.project:nth-child(3) .shape{background:var(--yellow)}
+.about{
+  background:var(--ink);color:var(--cream);border-radius:40px;
+  padding:70px;display:grid;grid-template-columns:1fr 1fr;gap:60px;
+  position:relative;overflow:hidden
+}
+.about h2{font-size:clamp(50px,6vw,80px);line-height:.9}
+.about p{font-size:19px;line-height:1.7;align-self:end}
+footer{
+  background:var(--orange);border-top:4px solid var(--ink);
+  padding:50px max(20px,calc((100% - 1180px)/2));display:flex;
+  justify-content:space-between;font-weight:700
+}
+@keyframes float{50%{transform:rotate(-8deg) translateY(-18px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes bounce{50%{transform:translateY(-15px) rotate(12deg)}}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@media(max-width:800px){
+ .navlinks{display:none}.nav{box-shadow:4px 4px 0 var(--ink)}
+ .hero{min-height:auto;margin-top:60px;display:block}
+ .hero-copy{width:100%}.hero h1{font-size:18vw;letter-spacing:-5px}
+ .visual{position:relative;width:100%;height:450px;right:auto;top:auto;margin-top:30px}
+ .blob{width:300px;height:300px;right:30px}.face{right:70px;top:90px;transform:scale(.8) rotate(7deg)}
+ .blob2{width:130px;height:130px}.sun{width:90px;height:90px}
+ .work-grid{grid-template-columns:1fr}.about{grid-template-columns:1fr;padding:40px}
+ footer{display:block}.footer-links{margin-top:20px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="logo" href="index.html">BLOO<span>IE</span>.</a>
+  <div class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="work.html">Work</a>
+    <a href="process.html">Process</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <a class="navbtn" href="contact.html">Let's talk ↗</a>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">CREATIVE STUDIO ✦ BANG!</div>
+    <h1>MAKE<br><span class="stroke">GOOD</span><br>NOISE.</h1>
+    <p>เราเปลี่ยนไอเดียธรรมดาให้กลายเป็นแบรนด์และ digital experiences ที่คนจำได้</p>
+    <a class="cta" href="work.html">See our work ↗</a>
+  </div>
+  <div class="visual">
+    <div class="blob"></div>
+    <div class="blob2"></div>
+    <div class="sun"></div>
+    <div class="face"><i class="eye one"></i><i class="eye two"></i><i class="smile"></i></div>
+    <div class="star">✦</div>
+  </div>
+</section>
+
+<div class="marquee"><span>BRAND • DIGITAL • DESIGN • STRATEGY • BRAND • DIGITAL • DESIGN • STRATEGY • </span></div>
+
+<section class="section">
+  <div class="section-head">
+    <h2>SELECTED<br>WORK.</h2>
+    <p>งานที่เราใส่ทั้ง strategy, personality และความกล้าเข้าไปจนเกิดเป็นผลงานที่มี character</p>
+  </div>
+  <div class="work-grid">
+    <a class="project" href="work.html"><small>01 / BRAND IDENTITY</small><h3>Sunny<br>Side Up</h3><div class="shape"></div></a>
+    <a class="project" href="work.html"><small>02 / DIGITAL EXPERIENCE</small><h3>Play<br>Ground</h3><div class="shape"></div></a>
+    <a class="project" href="work.html"><small>03 / CAMPAIGN</small><h3>Good<br>Vibes Club</h3><div class="shape"></div></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="about">
+    <h2>WE MAKE<br>BRANDS<br>FEEL ALIVE.</h2>
+    <p>Blooie คือ creative studio ที่เชื่อว่า design ไม่ควรเป็นแค่สิ่งที่ “สวย” แต่ควรมี energy, personality และทำให้คนรู้สึกบางอย่าง เราทำตั้งแต่ brand strategy ไปจนถึง digital experience.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div>© 2026 BLOOIE STUDIO</div>
+  <div class="footer-links">Instagram　Behance　Email ↗</div>
+</footer>
+</body>
+</html>

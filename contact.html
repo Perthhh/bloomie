@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blooie — Contact</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+:root{--cream:#fff6e7;--peach:#ff9275;--yellow:#ffd84d;--orange:#ff6848;--ink:#171717;--purple:#9182ff}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--peach);color:var(--ink);font-family:"DM Sans"}a{text-decoration:none;color:inherit}h1,h2,h3{font-family:"Space Grotesk"}
+.nav{width:min(1180px,calc(100% - 40px));margin:20px auto;padding:14px 18px;background:#fffdf8;border:3px solid var(--ink);border-radius:60px;box-shadow:5px 5px var(--ink);display:flex;justify-content:space-between;align-items:center}.logo{font:700 27px "Space Grotesk"}.logo span{color:var(--orange)}.navlinks{display:flex;gap:28px;font-size:14px;font-weight:700}.navlinks a:hover{color:var(--orange)}.navbtn{background:var(--ink);color:#fff;padding:11px 20px;border-radius:30px;font-weight:700}
+.contact{width:min(1180px,calc(100% - 40px));margin:90px auto 100px;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}.intro h1{font-size:clamp(70px,10vw,135px);line-height:.8;letter-spacing:-8px}.intro p{font-size:20px;line-height:1.6;max-width:470px;margin:35px 0}.hello{font-size:22px;font-weight:800;text-decoration:underline}.form{background:var(--cream);border:4px solid var(--ink);border-radius:35px;padding:38px;box-shadow:9px 9px var(--ink)}label{display:block;font-weight:800;margin-bottom:8px}input,textarea,select{width:100%;border:3px solid var(--ink);border-radius:14px;background:#fffdf8;padding:15px;font:inherit;margin-bottom:24px;outline:none}input:focus,textarea:focus,select:focus{background:var(--yellow)}textarea{min-height:130px;resize:vertical}.submit{width:100%;border:3px solid var(--ink);border-radius:40px;background:var(--orange);padding:16px;font:700 17px "DM Sans";box-shadow:5px 5px var(--ink);cursor:pointer;transition:.2s}.submit:hover{transform:translate(3px,3px);box-shadow:2px 2px var(--ink)}
+.contact-info{width:min(1180px,calc(100% - 40px));margin:0 auto 100px;display:flex;gap:20px;flex-wrap:wrap}.info-card{flex:1;min-width:220px;background:var(--yellow);border:3px solid var(--ink);border-radius:25px;padding:25px;box-shadow:5px 5px var(--ink)}.info-card:nth-child(2){background:#bce8d8}.info-card:nth-child(3){background:var(--purple)}.info-card small{font-weight:800}.info-card h3{font-size:30px;margin-top:20px}
+footer{background:var(--ink);color:var(--cream);border-top:4px solid var(--ink);padding:50px max(20px,calc((100% - 1180px)/2));display:flex;justify-content:space-between;font-weight:700}
+@media(max-width:750px){.navlinks{display:none}.contact{grid-template-columns:1fr;margin-top:70px;gap:50px}.intro h1{font-size:19vw}.form{padding:25px}.contact-info{display:grid;grid-template-columns:1fr}footer{display:block}}
+</style>
+</head>
+<body>
+<nav class="nav">
+<a class="logo" href="index.html">BLOO<span>IE</span>.</a>
+<div class="navlinks"><a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="process.html">Process</a><a href="contact.html">Contact</a></div>
+<a class="navbtn" href="contact.html">Let's talk ↗</a>
+</nav>
+
+<section class="contact">
+<div class="intro">
+<h1>LET'S<br>MAKE<br>NOISE.</h1>
+<p>มี project ในหัวแล้ว หรือยังไม่แน่ใจว่าต้องเริ่มตรงไหน? เล่าให้เราฟังได้เลย</p>
+<a class="hello" href="mailto:hello@blooie.studio">hello@blooie.studio ↗</a>
+</div>
+
+<form class="form" onsubmit="event.preventDefault();alert('Thanks! Blooie will get back to you soon ✦')">
+<label for="name">Your name</label>
+<input id="name" type="text" placeholder="ชื่อของคุณ" required>
+
+<label for="email">Email</label>
+<input id="email" type="email" placeholder="you@example.com" required>
+
+<label for="type">What can we help with?</label>
+<select id="type">
+<option>Brand Strategy</option>
+<option>Visual Identity</option>
+<option>Website / Digital</option>
+<option>Creative Campaign</option>
+<option>Something else</option>
+</select>
+
+<label for="message">Tell us more</label>
+<textarea id="message" placeholder="เล่า project ของคุณให้เราฟัง..."></textarea>
+
+<button class="submit" type="submit">SEND IT ✦</button>
+</form>
+</section>
+
+<section class="contact-info">
+<div class="info-card"><small>EMAIL</small><h3>hello@blooie.studio</h3></div>
+<div class="info-card"><small>FOLLOW</small><h3>Instagram ↗</h3></div>
+<div class="info-card"><small>AVAILABILITY</small><h3>Let's create.</h3></div>
+</section>
+
+<footer><div>© 2026 BLOOIE STUDIO</div><div>Made with curiosity ✦</div></footer>
+</body>
+</html>

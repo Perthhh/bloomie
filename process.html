@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blooie — Process</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+:root{--cream:#fff6e7;--peach:#ff9275;--yellow:#ffd84d;--orange:#ff6848;--ink:#171717;--purple:#9182ff}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--cream);color:var(--ink);font-family:"DM Sans"}a{text-decoration:none;color:inherit}h1,h2,h3{font-family:"Space Grotesk"}
+.nav{width:min(1180px,calc(100% - 40px));margin:20px auto;padding:14px 18px;background:#fffdf8;border:3px solid var(--ink);border-radius:60px;box-shadow:5px 5px var(--ink);display:flex;justify-content:space-between;align-items:center}.logo{font:700 27px "Space Grotesk"}.logo span{color:var(--orange)}.navlinks{display:flex;gap:28px;font-size:14px;font-weight:700}.navlinks a:hover{color:var(--orange)}.navbtn{background:var(--ink);color:#fff;padding:11px 20px;border-radius:30px;font-weight:700}
+.hero{width:min(1180px,calc(100% - 40px));margin:100px auto 90px}.tag{display:inline-block;background:var(--yellow);border:3px solid var(--ink);padding:8px 15px;border-radius:30px;font-weight:800}.hero h1{font-size:clamp(70px,11vw,140px);line-height:.82;letter-spacing:-8px;margin-top:30px}.hero p{font-size:20px;line-height:1.6;max-width:600px;margin-top:30px}
+.steps{width:min(1180px,calc(100% - 40px));margin:auto;padding-bottom:110px}.step{display:grid;grid-template-columns:130px 1fr 1fr;gap:30px;padding:45px 0;border-top:3px solid var(--ink);align-items:center}.number{font:700 70px "Space Grotesk";color:var(--orange);-webkit-text-stroke:2px var(--ink)}.step h2{font-size:55px;line-height:.9;letter-spacing:-3px}.step p{line-height:1.7;max-width:450px}.badge{display:inline-block;margin-top:20px;padding:7px 13px;border:2px solid var(--ink);border-radius:20px;font-weight:700;background:var(--yellow)}.step:nth-child(2) .badge{background:var(--peach)}.step:nth-child(3) .badge{background:var(--purple);color:#fff}.step:nth-child(4) .badge{background:#bce8d8}
+.final{width:min(1180px,calc(100% - 40px));margin:0 auto 100px;background:var(--ink);color:var(--cream);padding:65px;border-radius:40px;position:relative;overflow:hidden}.final h2{font-size:clamp(50px,7vw,90px);line-height:.85;position:relative;z-index:2}.final p{max-width:500px;line-height:1.7;margin-top:30px;position:relative;z-index:2}.blob{position:absolute;width:280px;height:280px;border-radius:50%;background:var(--yellow);right:-50px;top:-50px;border:4px solid var(--ink)}
+footer{background:var(--orange);border-top:4px solid var(--ink);padding:50px max(20px,calc((100% - 1180px)/2));display:flex;justify-content:space-between;font-weight:700}
+@media(max-width:750px){.navlinks{display:none}.hero{margin-top:70px}.hero h1{font-size:18vw}.step{grid-template-columns:70px 1fr;gap:15px}.step p{grid-column:2}.step h2{font-size:43px}.number{font-size:48px}.final{padding:40px}footer{display:block}}
+</style>
+</head>
+<body>
+<nav class="nav">
+<a class="logo" href="index.html">BLOO<span>IE</span>.</a>
+<div class="navlinks"><a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="process.html">Process</a><a href="contact.html">Contact</a></div>
+<a class="navbtn" href="contact.html">Let's talk ↗</a>
+</nav>
+
+<section class="hero">
+<div class="tag">HOW WE WORK ✦</div>
+<h1>NO MYSTERY.<br>JUST GOOD<br>PROCESS.</h1>
+<p>กระบวนการของเรา collaborative, transparent และออกแบบมาเพื่อให้ไอเดียดีขึ้นทุก step</p>
+</section>
+
+<section class="steps">
+<div class="step"><div class="number">01</div><div><h2>DISCOVER</h2><span class="badge">LISTEN + LEARN</span></div><p>เริ่มจากการทำความเข้าใจ business, audience, challenge และโอกาสที่อยู่ตรงหน้า ก่อนกระโดดไปทำ design</p></div>
+<div class="step"><div class="number">02</div><div><h2>DEFINE</h2><span class="badge">FOCUS + STRATEGY</span></div><p>จัดระเบียบ insight ให้กลายเป็น clear direction, positioning และ creative territory ที่ทุกคนเห็นภาพตรงกัน</p></div>
+<div class="step"><div class="number">03</div><div><h2>CREATE</h2><span class="badge">MAKE + PLAY</span></div><p>ลงมือสร้าง ทดลอง เล่นกับ visual language และพัฒนา concept จนได้ solution ที่ทั้ง bold และมีเหตุผล</p></div>
+<div class="step"><div class="number">04</div><div><h2>LAUNCH</h2><span class="badge">SHIP + GROW</span></div><p>นำสิ่งที่สร้างไปใช้งานจริง พร้อมส่งต่อระบบและ guidelines เพื่อให้แบรนด์เติบโตต่อได้อย่างสม่ำเสมอ</p></div>
+</section>
+
+<section class="final">
+<h2>GOOD THINGS<br>TAKE A LITTLE<br>EXPERIMENTING.</h2>
+<p>เราไม่ได้เชื่อในสูตรสำเร็จ แต่เชื่อในการลองสิ่งใหม่ ๆ จนเจอสิ่งที่ใช่</p>
+<div class="blob"></div>
+</section>
+
+<footer><div>© 2026 BLOOIE STUDIO</div><div>Curious? Let's talk ↗</div></footer>
+</body>
+</html>

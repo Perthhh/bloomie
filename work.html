@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blooie — Work</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+:root{--cream:#fff6e7;--peach:#ff9275;--yellow:#ffd84d;--orange:#ff6848;--ink:#171717;--purple:#9182ff;--mint:#bce8d8}
+*{box-sizing:border-box;margin:0;padding:0}body{background:var(--cream);color:var(--ink);font-family:"DM Sans"}a{text-decoration:none;color:inherit}h1,h2,h3{font-family:"Space Grotesk"}
+.nav{width:min(1180px,calc(100% - 40px));margin:20px auto;padding:14px 18px;background:#fffdf8;border:3px solid var(--ink);border-radius:60px;box-shadow:5px 5px var(--ink);display:flex;justify-content:space-between;align-items:center}.logo{font:700 27px "Space Grotesk"}.logo span{color:var(--orange)}.navlinks{display:flex;gap:28px;font-size:14px;font-weight:700}.navlinks a:hover{color:var(--orange)}.navbtn{background:var(--ink);color:#fff;padding:11px 20px;border-radius:30px;font-weight:700}
+.header{width:min(1180px,calc(100% - 40px));margin:100px auto 70px}.tag{display:inline-block;background:var(--yellow);border:3px solid var(--ink);padding:8px 15px;border-radius:30px;font-weight:800}.header h1{font-size:clamp(75px,12vw,150px);line-height:.8;letter-spacing:-8px;margin-top:30px}.header p{font-size:20px;max-width:520px;line-height:1.6;margin-top:30px}
+.projects{width:min(1180px,calc(100% - 40px));margin:auto;padding-bottom:110px}.project{display:grid;grid-template-columns:1fr 1fr;min-height:530px;border:4px solid var(--ink);border-radius:35px;margin-bottom:30px;overflow:hidden;box-shadow:8px 8px var(--ink);transition:.3s}.project:hover{transform:translateY(-8px)}.info{padding:40px;display:flex;flex-direction:column;justify-content:space-between}.info h2{font-size:clamp(50px,6vw,82px);line-height:.85;letter-spacing:-4px}.info p{line-height:1.6;max-width:400px}.meta{font-weight:800}.visual{position:relative;overflow:hidden;border-left:4px solid var(--ink)}.p1 .info{background:var(--yellow)}.p1 .visual{background:var(--peach)}.p2 .info{background:var(--purple)}.p2 .visual{background:var(--mint)}.p3 .info{background:var(--peach)}.p3 .visual{background:var(--yellow)}
+.circle{width:320px;height:320px;border:4px solid var(--ink);border-radius:50%;background:var(--orange);position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);transition:.5s}.project:hover .circle{transform:translate(-50%,-50%) rotate(25deg) scale(1.08);border-radius:30%}.p2 .circle{background:var(--yellow);border-radius:25px;transform:translate(-50%,-50%) rotate(20deg)}.p3 .circle{background:var(--purple)}
+footer{background:var(--orange);border-top:4px solid var(--ink);padding:50px max(20px,calc((100% - 1180px)/2));display:flex;justify-content:space-between;font-weight:700}
+@media(max-width:700px){.navlinks{display:none}.header{margin-top:70px}.header h1{font-size:19vw}.project{grid-template-columns:1fr}.visual{height:330px;border-left:0;border-top:4px solid var(--ink)}.project{min-height:auto}.info{min-height:380px}footer{display:block}}
+</style>
+</head>
+<body>
+<nav class="nav">
+<a class="logo" href="index.html">BLOO<span>IE</span>.</a>
+<div class="navlinks"><a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Work</a><a href="process.html">Process</a><a href="contact.html">Contact</a></div>
+<a class="navbtn" href="contact.html">Let's talk ↗</a>
+</nav>
+
+<header class="header">
+<div class="tag">OUR PLAYGROUND ✦</div>
+<h1>WORK<br>THAT<br>POPS.</h1>
+<p>Selected projects ที่เราใช้ design, strategy และความซนเล็ก ๆ เพื่อทำให้แบรนด์แตกต่าง</p>
+</header>
+
+<section class="projects">
+<a class="project p1" href="contact.html">
+<div class="info"><div class="meta">01 — BRAND IDENTITY</div><h2>Sunny<br>Side Up</h2><p>สร้าง visual identity ใหม่ให้แบรนด์อาหารเช้าที่อยากให้ทุกเช้ารู้สึกสนุกขึ้น</p></div>
+<div class="visual"><div class="circle"></div></div>
+</a>
+<a class="project p2" href="contact.html">
+<div class="info"><div class="meta">02 — DIGITAL EXPERIENCE</div><h2>Play<br>Ground</h2><p>Digital platform ที่เปลี่ยนการค้นหา activity ให้กลายเป็นเรื่องสนุก</p></div>
+<div class="visual"><div class="circle"></div></div>
+</a>
+<a class="project p3" href="contact.html">
+<div class="info"><div class="meta">03 — CAMPAIGN</div><h2>Good<br>Vibes</h2><p>Campaign identity ที่เต็มไปด้วยสี รูปทรง และ energy สำหรับ community รุ่นใหม่</p></div>
+<div class="visual"><div class="circle"></div></div>
+</a>
+</section>
+
+<footer><div>© 2026 BLOOIE STUDIO</div><div>Design with a little chaos ✦</div></footer>
+</body>
+</html>
